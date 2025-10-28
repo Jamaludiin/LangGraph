@@ -1,0 +1,14 @@
+
+# 
+.env
+
+#ignore the .venv file
+.venv
+
+#ignore the venv file
+venv/
+
+#ignore the env file
+env/
+
+#ignore the .gitignore file.env
