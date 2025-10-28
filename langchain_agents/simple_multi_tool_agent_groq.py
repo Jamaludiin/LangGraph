@@ -75,7 +75,7 @@ agent = initialize_agent(
     llm=llm,
     agent_type="zero-shot-react-description",  # Enables reasoning + tool use
     verbose=True,
-    max_iterations=3
+    max_iterations=1
 )
 
 # --- Run Agent ---
@@ -94,3 +94,19 @@ for q in queries:
     print("Response:", response)
 
 print("\n=== Done ===")
+
+
+# this way also works but without the reasoning loop
+response = agent.run("What is the weather in Nairobi?")
+print(response)
+
+
+# 
+
+response = tools[0].func("What is the weather in Nairobi?")
+response = tools[1].func("Calculate 15 * (3 + 2)")
+response = tools[2].func("Summarize: Artificial intelligence enables machines to perform tasks that typically require human intelligence...")
+
+# print the response without the reasoning loop
+print("\n=== Agent Response ===")
+print(response)
