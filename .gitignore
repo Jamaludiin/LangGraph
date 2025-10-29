@@ -12,3 +12,8 @@ venv/
 env/
 
 #ignore the .gitignore file.env
+
+
+#ignore lessonPlanProject.md file
+lessonPlanProjects.md
+invoke_agentrun_toolfunction.md

@@ -104,8 +104,8 @@ for q in queries:
 # ----------------------------------------------------------
 # Ask a Specific Question
 # ----------------------------------------------------------
-user_question = input("🧠 Ask your question: ")
-
+#user_question = input("🧠 Ask your question: ")
+user_question = "What is the population of Nairobi?"
 result = agent_executor.invoke({"input": user_question})
 print("\n✅ Final Answer:", result["output"])
 
