@@ -17,3 +17,6 @@ env/
 #ignore lessonPlanProject.md file
 lessonPlanProjects.md
 invoke_agentrun_toolfunction.md
+
+#ignore the TetsGeneratorAgentsBBT file
+TetsGeneratorAgentsBBT/VersionTwoPlans.md
