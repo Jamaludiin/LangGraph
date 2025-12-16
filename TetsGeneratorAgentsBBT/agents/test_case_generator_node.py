@@ -5,7 +5,7 @@ from agents.AgentState import AgentState
 from agents.environmentVariables import llm
 
 # accepts the test plan and generates the test case
-def test_case_node(state: AgentState):
+def test_case_generator_node(state: AgentState):
     code_under_test = state["code_under_test"]
     response = llm.invoke(
         f"""Generate only the pure python code for pytest style test cases, 

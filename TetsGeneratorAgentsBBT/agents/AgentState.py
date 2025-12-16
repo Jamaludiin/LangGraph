@@ -5,8 +5,9 @@ class AgentState(TypedDict):
     code_under_test: str
     test_plan: str
     test_case: str
-    
-    failure: str
+
+
+    static_analyzer: str
     patch_suggestion: str
     execution: str
     documentation_generator: str

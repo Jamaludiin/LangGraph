@@ -27,5 +27,10 @@ def test_case_optimizer_node(state: AgentState):
             \n\ndo not include the code these ``` or python keywords
 
         """
+        # Write the test case optimizer to a file
+        output_file_path = "/Users/LLM and HuggingFace/LangGraph/TetsGeneratorAgentsBBT/AgentFeedback/test_case_optimizer/test_case_optimizer.md"
+        os.makedirs(os.path.dirname(output_file_path), exist_ok=True)
+        with open(output_file_path, "w") as file:
+            file.write(response.content)
     )
     return {"test_case_optimizer": response.content}

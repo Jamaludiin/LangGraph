@@ -24,4 +24,9 @@ def test_plan_reviewer_node(state: AgentState):
             \n\nEnsure plan follows testing best practices
         """
     )
+    # Write the test plan reviewer to a file
+    output_file_path = "/Users/LLM and HuggingFace/LangGraph/TetsGeneratorAgentsBBT/AgentFeedback/test_plan_reviewer/test_plan_reviewer.md"
+    os.makedirs(os.path.dirname(output_file_path), exist_ok=True)
+    with open(output_file_path, "w") as file:
+        file.write(response.content)
     return {"test_plan_reviewer": response.content}

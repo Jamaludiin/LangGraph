@@ -13,8 +13,15 @@ from agents.environmentVariables import llm
 
 def coverage_enhancer_node(state: AgentState): 
     response = llm.invoke(
-        f"""Read the following test code and check for:
+        f"""Read the following source code and test code and check for:
+            \n\n{state['code_under_test']}
+            \n\n{state['test_plan']}
             \n\n{state['test_case']}
+            \n\n{state['static_analyzer']}
+            \n\n{state['patch_suggestion']}
+            \n\n{state['execution']}
+            \n\n{state['mutational_testing']}
+            \n\n{state['bug_predictor']}
             \n\nMissing branches
             \n\nMissing error paths
             \n\nUntested input types

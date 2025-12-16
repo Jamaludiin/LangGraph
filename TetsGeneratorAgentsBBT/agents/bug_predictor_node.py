@@ -13,10 +13,13 @@ Then it asks the test plan generator to create tests around predicted bugs.
 from agents.AgentState import AgentState
 from agents.environmentVariables import llm
 
-def bug_predictor_agent(state: AgentState):
+def bug_predictor_node(state: AgentState):
     response = llm.invoke(
         f"""Inspect the following code and predict potential defects using static heuristics:
             \n\n{state['code_under_test']}
+            \n\n{state['static_analyzer']}
+            \n\n{state['test_plan']}
+            \n\n{state['test_case']}
             \n\nDivision without zero handling
             \n\nMissing input validation
             \n\nUnsafe type conversions
