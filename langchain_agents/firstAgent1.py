@@ -64,7 +64,6 @@ print(response)
 esponse = llm.invoke("Search the web for the current weather in Nairobi.")
 print("\n=== Agent Response using llm.invoke() ===")
 print(response)
-
 # OR 
 response = agent.run("What is the weather in Nairobi?")
 print("\n=== Agent Response using agent.run() ===")
