@@ -60,8 +60,10 @@ def agent_node(state: AgentState):
     # Simple decision rule for when to use tool
     if any(word in user_query.lower() for word in ["capital", "weather", "population"]):
         result = tools[0].invoke({"query": user_query})
+        # append the result to the chat history
         chat_history.append(f"User: {user_query}")
         chat_history.append(f"Agent: {result}")
+        # return the result and the chat history
         return {"tool_output": result, "chat_history": chat_history}
     else:
         # Use the chat history as context in LLM call

@@ -32,3 +32,7 @@ def static_analyzer_node(state: AgentState):
     with open(output_file_path, "w") as file:
         file.write(response.content)
     return {"static_analyzer": response.content}
+
+
+# run this method to test 
+

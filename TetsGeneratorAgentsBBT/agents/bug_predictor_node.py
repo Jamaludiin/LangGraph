@@ -27,3 +27,16 @@ def bug_predictor_node(state: AgentState):
         """
     )
     return {"bug_predictor": response.content}
+
+
+
+# run this file to test the bug predictor node
+if __name__ == "__main__":
+    state = {
+        "code_under_test": "print(1/0)",
+        "static_analyzer": "print(1/0)",
+        "test_plan": "print(1/0)",
+        "test_case": "print(1/0)"
+    }
+    result = bug_predictor_node(state)
+    print(result)
