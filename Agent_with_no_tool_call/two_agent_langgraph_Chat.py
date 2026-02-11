@@ -1,4 +1,4 @@
-# filename: python3 single_agent_langgraph_Chat.py
+# filename: python3 two_agent_langgraph_Chat.py
 # simulate two agents asking & answering each other
 # working correctly
 
