@@ -20,3 +20,7 @@ invoke_agentrun_toolfunction.md
 
 #ignore the TetsGeneratorAgentsBBT file
 TetsGeneratorAgentsBBT/VersionTwoPlans.md
+
+
+__pycache__/
+*.pyc

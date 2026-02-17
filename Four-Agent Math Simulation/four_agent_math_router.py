@@ -172,8 +172,8 @@ app = graph.compile()
 # 🔟 Run
 # ----------------------------------------------------------
 app.invoke({
-    #"message": "What is 45 divided by 9?"
-    "message": "what is 45 divided by 9? and what is 45 multiplied by 9?"
+    "message": "What is 45 divided by 9?"
+    #"message": "what is 45 divided by 9? and what is 45 multiplied by 9?"
 })
 # "what is 45 divided by 9? and "what is 45 multiplied by 9?" should both work
 
